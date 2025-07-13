@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="./index.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <label for="enter the first value"></label>
+        <input type="number"name=""id=""><br></br>
+        <label for="enter the second value"></label>
+        <input type="number"name=""id=""><br></br>
+        <button>add</button>
+        <button>subtraction</button>
+        <button>addition</button>
+        <button>multiplication</button>
+        <button>division</button>
+
+    </form>
+    
+</body>
+</html>
