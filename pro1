@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body
+        {
+            text-align: center;
+        }
+        input,select,button
+        {
+            margin: 10px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>calcute using javascript</h1>
+    <input type="number"placeholder="enter the value1" id="num1">
+    <input type="number"placeholder="enter the value2" id="num2">
+    <br>
+    <select name=""id="operation">
+        <option value="add">add</option>
+        <option value="multiply">multiply</option>
+        <option value="divide">divide</option>
+    </select>
+    <button>calculate</button>
+    <div id="result">result</div>
+    <script>
+        let num1=parseInt(document.getElementById("num1").value);
+        let num2=parseInt(document.getElementById("num2").value);
+        let operation=document.getElementById("operations").value;
+        let result;
+        if(isNaN(num1)||isNaN(num2))
+        {
+            let result="enter the valid num";
+        }else
+        {
+            switch(operation)
+            {
+                case"add":
+                result=num1+num2;
+                break;
+                case"multiplication":
+                result=num1*num2;
+                break;
+            }
+        }
+        document.getElementById("result").innerText="resultn is"+ " "+result;
+    
+    
+    </script>
+</body>
+</html>
