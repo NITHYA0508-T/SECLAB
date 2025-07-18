@@ -24,16 +24,14 @@
             let guessvalue=parseInt(document.getElementById("num").value);
             count++;
             if(guessvalue < target){
-                document.getElementById("feedback").
-                innerText="too low";
+                document.getElementById("feedback").innerText="too low";
             }
             else if(guessvalue > target){
-                document.getElementById("feedback").
-                innerText="too high";
+                document.getElementById("feedback").innerText="too high";
             }
             else{
-                document.getElementById("feedback").
-                innerText="your guess is correct";
+                document.getElementById("feedback").innerText="your guess is correct ".
+                document.getElementById("attempts").innerText=count;
             }
         }
     </script>
