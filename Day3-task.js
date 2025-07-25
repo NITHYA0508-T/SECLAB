@@ -1,5 +1,5 @@
 let tasks = [];
-let taskCount = 0; // Index tracker
+let taskCount = 0; 
 function addTask(task, callback) 
     {
         tasks[taskCount]=task; 
