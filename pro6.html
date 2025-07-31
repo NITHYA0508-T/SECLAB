@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Mini Text Analyser</h2>
+    <textarea id="paragraphInput"placeholder="enter a paragraph"
+    rows="6" cols="60"></textarea><br>
+    <button onclick="analyzeText()">Analyze</button>
+    <pre id="output"></pre>
+    <script>
+        function analyzeText(){
+        const text=document.getElementById("paragraphInput").value;
+        const totalchars=text.length;
+        const words=text.match(/\b\w+\b/g)||[];
+        const totalwords=words.length;
+        const totalSentences=(text.match(/[.!?]/g||[])).length;
+        const uniqueWords=[...new Set(words.map((w)=>w.toLowerCase()))];
+        const freq={};
+        words.forEach((word) => {
+            const w = word.toLowerCase();
+            freq[w] = (freq[w]||0)+1;
+
+        });
+    const sortedFreq = object.entries(freq).sort((a,b)=>b[1]-a[1]);
+    const output=`
+    Total Characters:${totalChars}
+    Total Words:${totalWords}
+    Total Sentences:${totalSentences}
+    Unique Frequency:
+    ${sortedFreq.map(([word,count])=>word+":"+count).join("\n")}`;
+    document.getElementById("output").textcontent=output;
+ }
+    </script>
+</body>
+</html>
