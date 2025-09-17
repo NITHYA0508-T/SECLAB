@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // a set is a collection of unique values.Itautomatically removes duplicates
+        //syntax:
+        //let myset=new set();
+        let email=new Set([]);
+        email.add("js@gmail.com");
+        email.add("java@gmail.com");
+        email.add("py@gmail.com");
+        email.add("py@gmail.com");
+        console.log(email);
+       // email.delete("py@gamil.com");
+       // console.log(email);
+       //email.clear();
+       //console.log(email);
+       for(let mail of email){
+        console.log(mail);
+       }
+       email.forEach(x=>{
+        console.log(x);
+       })
+       let admin=new Set(["write","read","delete"]);
+       let user=new Set(["read"]);
+       function haspermission(role,granted){
+          return role.has(granted);
+       }
+       console.log(haspermission(admin,"delete"));
+       console.log(haspermission(user,"delete"));
+       let setA=new Set([1,2,3,4,5,1]);
+       let setB=new Set([6,7,8,9,10,1]);
+       let union=new Set([...setA,...setB]);
+       console.log(union);
+       let intersection=new Set([...setA].filter(x=>setB.has(x)));
+       console.log(intersection);
+       let diff=new Set([...setA].filter(x=>!setB.has(x))); 
+       console.log(diff);
+       // entries() method :
+       // returns an iterator object that contains an array of [value,value] for each element in the set object,in insertion order.
+       let fruits=new Set(["apple","banana"]);
+       let entries=fruits.entries();
+       for(let entry of entries){
+        console.log(entry);
+       }
+       //weakmap:
+       // a weakmap is a collection of key-value pairs in which the keys are weakly referenced.
+       let user1={name:"java"};
+       let user2={name:"python"};
+       let mymap=new WeakMap();
+       mymap.set(user1,"welcome");
+       mymap.set(user2,"welcome python!");
+       console.log(mymap.get(user1));
+       //for( let map of mymap){
+        //console.log(map);
+      // }
+
+    </script>
+</body>
+</html>
